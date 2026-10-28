@@ -1,16 +1,26 @@
 body {
- margin: 0;
-     min-height: 100vh;
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  color: #29271f;
+  background-color: #f2ede1;
+  background-image:
+    radial-gradient(ellipse at 50% 44%, rgb(255 255 255 / 78%), transparent 58%),
+    linear-gradient(rgb(111 93 61 / 8%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(111 93 61 / 8%) 1px, transparent 1px);
+  background-size: auto, 36px 36px, 36px 36px;
+}
 
-  background-color: #99907b;
+.welcome {
+  position: relative;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: xx-large;
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+  animation: arrive 700ms ease-out both;
+}
 
- background-image:
- linear-gradient(black, black 1px, transparent 1px),
- linear-gradient(90deg, black 1px, transparent 1px),
- radial-gradient(circle at center, rgb(138, 110, 62), transparent 50%);
-
- background-size:
-  40px 40px,
-  40px 40px,
-  cover;
-} 
