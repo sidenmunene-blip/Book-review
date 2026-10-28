@@ -1,5 +1,16 @@
-document.querySelector("#continue").addEventListener("hover",
+const continueButton = document.querySelector("#continue");
 
-document.querySelector("#continue").addEventListener("click", () => {
-  window.location.href = "Home.html";
-});
+if (continueButton) {
+  continueButton.addEventListener("mouseenter", () => {
+    continueButton.style.transform = "scale(1.2)";
+  });
+
+  continueButton.addEventListener("mouseleave", () => {
+    continueButton.style.transform = "scale(1.0)";
+  })
+
+  continueButton.addEventListener("click", () => {
+    window.location.href = "Home.html";
+  });
+}
+
