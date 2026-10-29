@@ -15,3 +15,17 @@ if (continueButton) {
 }
 
 const bookcard = document.querySelector("#book-card")
+
+if (bookcard) {
+    bookcard.addEventListener("mouseenter", () => {
+    bookcard.style.transform = "scale(1.5)";
+  });
+
+    bookcard.addEventListener("mouseleave", () => {
+    bookcard.style.transform = "scale(1.0)";
+  })
+
+    bookcard.addEventListener("click", () => {
+    window.location.href = "Home.html";
+  });
+}
