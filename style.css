@@ -126,6 +126,15 @@ body {
   color: #625c4d;
 }
 
+.auth-demo-note {
+  margin: -0.8rem 0 1.25rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  color: #625c4d;
+  background: #f2ede1;
+  font-size: 0.88rem;
+}
+
 .auth-form {
   display: grid;
   gap: 0.6rem;

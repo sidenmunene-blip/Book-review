@@ -16,6 +16,12 @@ if (continueButton) {
   });
 }
 
+
+const users =
+ [
+  { username: "Bin", password: "Hacker" }
+];
+
 const signInForm = document.querySelector("#signin-form");
 
 if (signInForm) {
@@ -23,11 +29,22 @@ if (signInForm) {
 
   signInForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    signInMessage.textContent = "This is a demo form. Sign-in is not connected yet.";
+
+    const username = signInForm.elements.username.value.trim();
+    const password = signInForm.elements.password.value;
+    const matchedUser = users.find((user) =>
+      user.username === username && user.password === password
+    );
+
+    if (matchedUser) {
+      signInMessage.textContent = `Welcome back, ${matchedUser.username}!`;
+      signInForm.reset();
+    } else {
+      signInMessage.textContent = "Username or password is incorrect. Try the example account above.";
+    }
   });
 }
 
-// Add or edit book details in this list; each object creates one card.
 const books = [
   {
     title: "The Hobbit",
