@@ -16,6 +16,18 @@ if (continueButton) {
   });
 }
 
+const signInForm = document.querySelector("#signin-form");
+
+if (signInForm) {
+  const signInMessage = document.querySelector("#signin-message");
+
+  signInForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    signInMessage.textContent = "This is a demo form. Sign-in is not connected yet.";
+  });
+}
+
+// Add or edit book details in this list; each object creates one card.
 const books = [
   {
     title: "The Hobbit",

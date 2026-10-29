@@ -69,6 +69,129 @@ body {
   color: #625c4d;
 }
 
+.home-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.auth-nav-link,
+.back-link {
+  color: #7f452c;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-nav-link:hover,
+.back-link:hover,
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.auth-page {
+  width: min(100%, 440px);
+  margin: auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 0 1rem 0.25rem;
+}
+
+.auth-card {
+  padding: clamp(1.5rem, 6vw, 2.5rem);
+  border: 1px solid rgb(93 75 48 / 14%);
+  border-radius: 20px;
+  background: rgb(255 252 245 / 96%);
+  box-shadow: 0 14px 36px rgb(69 44 26 / 12%);
+}
+
+.auth-eyebrow {
+  margin: 0 0 0.7rem;
+  color: #945533;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.auth-card h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 7vw, 2.75rem);
+  letter-spacing: -0.04em;
+}
+
+.auth-intro {
+  margin: 0.65rem 0 1.75rem;
+  color: #625c4d;
+}
+
+.auth-form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.auth-form label {
+  margin-top: 0.35rem;
+  font-weight: 700;
+}
+
+.auth-form input {
+  width: 100%;
+  min-height: 2.8rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #c8bdab;
+  border-radius: 9px;
+  color: #29271f;
+  background: #fffdf8;
+  font: inherit;
+}
+
+.auth-form input:focus-visible {
+  outline: 3px solid rgb(197 135 81 / 55%);
+  border-color: #945533;
+}
+
+.auth-submit {
+  min-height: 2.9rem;
+  margin-top: 0.9rem;
+  border: 0;
+  border-radius: 999px;
+  color: #fffaf1;
+  background: #945533;
+  font: 700 1rem Georgia, "Times New Roman", serif;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.auth-submit:hover {
+  background: #7f452c;
+  transform: translateY(-2px);
+}
+
+.auth-submit:focus-visible {
+  outline: 3px solid #c58751;
+  outline-offset: 3px;
+}
+
+.auth-message {
+  min-height: 1.3em;
+  margin: 0.2rem 0 0;
+  color: #7f452c;
+  font-size: 0.9rem;
+}
+
+.auth-switch {
+  margin: 1.5rem 0 0;
+  color: #625c4d;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: #7f452c;
+  font-weight: 700;
+}
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));

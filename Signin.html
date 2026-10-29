@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signing in</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | The Bookshelf</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <main class="auth-page">
+    <a class="back-link" href="Home.html">← Back to books</a>
 
-<script src="script.js"></script>
+    <section class="auth-card" aria-labelledby="signin-title">
+      <p class="auth-eyebrow">THE BOOKSHELF</p>
+      <h1 id="signin-title">Welcome back</h1>
+      <p class="auth-intro">Sign in to continue to your reading corner.</p>
+
+      <form id="signin-form" class="auth-form">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+        <button class="auth-submit" type="submit">Sign in</button>
+        <p id="signin-message" class="auth-message" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-switch">New here? <a href="registration.html">Create an account</a></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
