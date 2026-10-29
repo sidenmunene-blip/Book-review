@@ -204,33 +204,60 @@ if (reviewForm) {
   let reviews = getReviews();
 
   function renderReviews() {
-    reviewBook.innerHTML = books.map((book) =>
-      `<option value="${escapeReviewHTML(book.id)}">${escapeReviewHTML(book.title)}</option>`
-    ).join("");
+    reviewBook.replaceChildren();
+    books.forEach((book) => {
+      const option = document.createElement("option");
+      option.value = book.id;
+      option.textContent = book.title;
+      reviewBook.append(option);
+    });
 
-    reviewList.innerHTML = books.map((book) => {
+    reviewList.replaceChildren();
+    books.forEach((book) => {
       const bookReviews = reviews.filter((review) => review.bookId === book.id);
-      const reviewItems = bookReviews.length
-        ? bookReviews.map((review) => {
-            const rating = Math.max(1, Math.min(5, Number(review.rating) || 1));
-            return `
-              <article class="review-entry">
-                <p class="review-stars">${"★".repeat(rating)}${"☆".repeat(5 - rating)}</p>
-                <p class="review-copy">${escapeReviewHTML(review.text)}</p>
-                <p class="review-author">By ${escapeReviewHTML(review.reviewer)}</p>
-              </article>
-            `;
-          }).join("")
-        : `<p class="empty-reviews">No reviews yet.</p>`;
+      const section = document.createElement("section");
+      section.className = "review-section";
+      section.id = book.id;
 
-      return `
-        <section class="review-section" id="${escapeReviewHTML(book.id)}">
-          <h2>${escapeReviewHTML(book.title)}</h2>
-          <p class="review-book-author">By ${escapeReviewHTML(book.author)}</p>
-          ${reviewItems}
-        </section>
-      `;
-    }).join("");
+      const heading = document.createElement("h2");
+      heading.textContent = book.title;
+
+      const bookAuthor = document.createElement("p");
+      bookAuthor.className = "review-book-author";
+      bookAuthor.textContent = `By ${book.author}`;
+
+      section.append(heading, bookAuthor);
+
+      if (bookReviews.length === 0) {
+        const emptyMessage = document.createElement("p");
+        emptyMessage.className = "empty-reviews";
+        emptyMessage.textContent = "No reviews yet.";
+        section.append(emptyMessage);
+      } else {
+        bookReviews.forEach((review) => {
+          const rating = Math.max(1, Math.min(5, Number(review.rating) || 1));
+          const entry = document.createElement("article");
+          entry.className = "review-entry";
+
+          const stars = document.createElement("p");
+          stars.className = "review-stars";
+          stars.textContent = `${"★".repeat(rating)}${"☆".repeat(5 - rating)}`;
+
+          const reviewText = document.createElement("p");
+          reviewText.className = "review-copy";
+          reviewText.textContent = review.text;
+
+          const reviewer = document.createElement("p");
+          reviewer.className = "review-author";
+          reviewer.textContent = `By ${review.reviewer}`;
+
+          entry.append(stars, reviewText, reviewer);
+          section.append(entry);
+        });
+      }
+
+      reviewList.append(section);
+    });
   }
 
   reviewForm.addEventListener("submit", (event) => {
@@ -243,15 +270,10 @@ if (reviewForm) {
       text: reviewForm.elements.text.value.trim()
     });
 
-    try {
-      localStorage.setItem(reviewStorageKey, JSON.stringify(reviews));
-      reviewForm.reset();
-      reviewMessage.textContent = "Review added.";
-      renderReviews();
-    } catch {
-      reviews.pop();
-      reviewMessage.textContent = "Could not save the review in this browser.";
-    }
+    localStorage.setItem(reviewStorageKey, JSON.stringify(reviews));
+    reviewForm.reset();
+    reviewMessage.textContent = "Review added.";
+    renderReviews();
   });
 
   renderReviews();
