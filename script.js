@@ -182,3 +182,77 @@ if (bookGrid) {
     });
   });
 }
+
+const reviewForm = document.querySelector("#review-form");
+
+if (reviewForm) {
+  const reviewBook = document.querySelector("#review-book");
+  const reviewList = document.querySelector("#review-list");
+  const reviewMessage = document.querySelector("#review-message");
+  const reviewStorageKey = "book-review-reviews";
+
+
+  function getReviews() {
+    try {
+      const savedReviews = JSON.parse(localStorage.getItem(reviewStorageKey));
+      return Array.isArray(savedReviews) ? savedReviews : [];
+    } catch {
+      return [];
+    }
+  }
+
+  let reviews = getReviews();
+
+  function renderReviews() {
+    reviewBook.innerHTML = books.map((book) =>
+      `<option value="${escapeReviewHTML(book.id)}">${escapeReviewHTML(book.title)}</option>`
+    ).join("");
+
+    reviewList.innerHTML = books.map((book) => {
+      const bookReviews = reviews.filter((review) => review.bookId === book.id);
+      const reviewItems = bookReviews.length
+        ? bookReviews.map((review) => {
+            const rating = Math.max(1, Math.min(5, Number(review.rating) || 1));
+            return `
+              <article class="review-entry">
+                <p class="review-stars">${"★".repeat(rating)}${"☆".repeat(5 - rating)}</p>
+                <p class="review-copy">${escapeReviewHTML(review.text)}</p>
+                <p class="review-author">By ${escapeReviewHTML(review.reviewer)}</p>
+              </article>
+            `;
+          }).join("")
+        : `<p class="empty-reviews">No reviews yet.</p>`;
+
+      return `
+        <section class="review-section" id="${escapeReviewHTML(book.id)}">
+          <h2>${escapeReviewHTML(book.title)}</h2>
+          <p class="review-book-author">By ${escapeReviewHTML(book.author)}</p>
+          ${reviewItems}
+        </section>
+      `;
+    }).join("");
+  }
+
+  reviewForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    reviews.push({
+      bookId: reviewBook.value,
+      reviewer: reviewForm.elements.reviewer.value.trim(),
+      rating: Number(reviewForm.elements.rating.value),
+      text: reviewForm.elements.text.value.trim()
+    });
+
+    try {
+      localStorage.setItem(reviewStorageKey, JSON.stringify(reviews));
+      reviewForm.reset();
+      reviewMessage.textContent = "Review added.";
+      renderReviews();
+    } catch {
+      reviews.pop();
+      reviewMessage.textContent = "Could not save the review in this browser.";
+    }
+  });
+
+  renderReviews();
+}

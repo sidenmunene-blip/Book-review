@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews</title>
+    <title>Reviews | The Bookshelf</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    
+<body class="reviews-body">
+  <main class="home-page reviews-page">
+    <nav class="home-nav" aria-label="Account">
+      <a class="auth-nav-link" href="Signin.html">Sign in</a>
+    </nav>
 
-<script src="./script.js"></script>    
+    <header class="page-heading">
+      <p class="eyebrow">THE BOOKSHELF</p>
+      <h1>Book Reviews</h1>
+      <p>Read what people think about each book.</p>
+    </header>
+
+    <form id="review-form" class="auth-card auth-form review-form">
+      <h2>Write a review</h2>
+
+      <label for="review-book">Book</label>
+      <select id="review-book" name="bookId" required></select>
+
+      <label for="reviewer-name">Your name</label>
+      <input id="reviewer-name" name="reviewer" type="text" placeholder="Your name" required>
+
+      <label for="review-rating">Your rating</label>
+      <select id="review-rating" name="rating" required>
+        <option value="5">5 stars</option>
+        <option value="4">4 stars</option>
+        <option value="3">3 stars</option>
+        <option value="2">2 stars</option>
+        <option value="1">1 star</option>
+      </select>
+
+      <label for="review-text">Your review</label>
+      <textarea id="review-text" name="text" rows="5" required></textarea>
+
+      <button class="auth-submit" type="submit">Post review</button>
+      <p id="review-message" class="auth-message" aria-live="polite"></p>
+    </form>
+
+    <div id="review-list" class="review-list"></div>
+  </main>
+
+<script src="script.js" defer></script>
 </body>
 </html>
