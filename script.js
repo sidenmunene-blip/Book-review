@@ -17,10 +17,61 @@ if (continueButton) {
 }
 
 
-const users =
- [
+const defaultUsers = [
   { username: "Bin", password: "Hacker" }
 ];
+
+function loadUsers() {
+  try {
+    const savedUsers = JSON.parse(localStorage.getItem("book-review-users"));
+    return Array.isArray(savedUsers) ? savedUsers : [...defaultUsers];
+  } catch {
+    return [...defaultUsers];
+  }
+}
+
+function saveUsers() {
+  try {
+    localStorage.setItem("book-review-users", JSON.stringify(users));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+let users = loadUsers();
+
+const registrationForm = document.querySelector("#registration-form");
+
+if (registrationForm) {
+  const registrationMessage = document.querySelector("#registration-message");
+
+  registrationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const username = registrationForm.elements.username.value.trim();
+    const password = registrationForm.elements.password.value;
+    const nameIsTaken = users.some(
+      (user) => user.username.toLowerCase() === username.toLowerCase()
+    );
+
+    if (nameIsTaken) {
+      registrationMessage.textContent = "That username is already registered.";
+      return;
+    }
+
+    users.push({ username, password });
+
+    if (!saveUsers()) {
+      users.pop();
+      registrationMessage.textContent = "The browser could not save this demo account.";
+      return;
+    }
+
+    registrationForm.reset();
+    registrationMessage.textContent = "Registration complete. You can now sign in.";
+  });
+}
 
 const signInForm = document.querySelector("#signin-form");
 

@@ -7,7 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="auth-page">
+    <a class="back-link" href="Home.html">← Back to books</a>
 
-<script src="script.js" defer></script>
+    <section class="auth-card" aria-labelledby="registration-title">
+      <p class="auth-eyebrow">THE BOOKSHELF</p>
+      <h1 id="registration-title">Create an account</h1>
+      <p class="auth-intro">Choose a username and password for this demo.</p>
+
+      <form id="registration-form" class="auth-form">
+        <label for="register-username">Username</label>
+        <input id="register-username" name="username" type="text" autocomplete="username" required>
+
+        <label for="register-password">Password</label>
+        <input id="register-password" name="password" type="password" autocomplete="new-password" required>
+
+        <button class="auth-submit" type="submit">Register</button>
+        <p id="registration-message" class="auth-message" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-switch">Already registered? <a href="Signin.html">Sign in</a></p>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
