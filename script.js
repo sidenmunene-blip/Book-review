@@ -89,12 +89,13 @@ if (signInForm) {
 
     if (matchedUser) {
       signInMessage.textContent = `Welcome back, ${matchedUser.username}!`;
-      signInForm.reset();
+      window.location.href = "Home.html";
     } else {
       signInMessage.textContent = "Username or password is incorrect. Try the example account above.";
     }
   });
 }
+
 
 const books = [
   {
