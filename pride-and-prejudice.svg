@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-labelledby="title desc">
+  <title id="title">Pride and Prejudice</title>
+  <desc id="desc">Original sage-green book-cover illustration with a decorative floral frame.</desc>
+  <rect width="400" height="600" fill="#d9dfc9"/>
+  <rect x="24" y="24" width="352" height="552" rx="4" fill="none" stroke="#53674f" stroke-width="3"/>
+  <rect x="38" y="38" width="324" height="524" rx="2" fill="none" stroke="#879579" stroke-width="1.5"/>
+  <g fill="none" stroke="#53674f" stroke-width="3">
+    <path d="M52 140 C95 140 92 75 130 78 C163 81 155 126 184 126 C213 126 209 75 246 78 C286 80 284 140 348 140"/>
+    <path d="M52 460 C95 460 92 525 130 522 C163 519 155 474 184 474 C213 474 209 525 246 522 C286 520 284 460 348 460"/>
+    <path d="M75 300 C108 272 117 279 132 300 C117 321 108 328 75 300Z M325 300 C292 272 283 279 268 300 C283 321 292 328 325 300Z"/>
+  </g>
+  <g fill="#a75f50"><circle cx="130" cy="79" r="8"/><circle cx="246" cy="79" r="8"/><circle cx="130" cy="521" r="8"/><circle cx="246" cy="521" r="8"/></g>
+  <text x="200" y="196" fill="#344435" font-family="Georgia,serif" font-size="18" letter-spacing="5" text-anchor="middle">JANE AUSTEN</text>
+  <text x="200" y="270" fill="#344435" font-family="Georgia,serif" font-size="37" font-weight="bold" text-anchor="middle">PRIDE</text>
+  <text x="200" y="315" fill="#344435" font-family="Georgia,serif" font-size="25" font-style="italic" text-anchor="middle">and</text>
+  <text x="200" y="360" fill="#344435" font-family="Georgia,serif" font-size="37" font-weight="bold" text-anchor="middle">PREJUDICE</text>
+  <path d="M155 402 Q200 430 245 402" fill="none" stroke="#a75f50" stroke-width="3"/>
+</svg>

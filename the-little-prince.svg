@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-labelledby="title desc">
+  <title id="title">The Little Prince</title>
+  <desc id="desc">Original midnight-blue illustration of a small planet, stars, and a tiny traveler.</desc>
+  <rect width="400" height="600" fill="#14294a"/>
+  <g fill="#fff1b3"><circle cx="52" cy="80" r="3"/><circle cx="330" cy="95" r="4"/><circle cx="294" cy="180" r="2.5"/><circle cx="75" cy="235" r="2.5"/><circle cx="352" cy="330" r="3"/><circle cx="49" cy="420" r="3"/><circle cx="300" cy="500" r="2.5"/><path d="M202 72l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/></g>
+  <circle cx="205" cy="284" r="104" fill="#e6b95f"/>
+  <path d="M110 304 Q205 257 300 304 Q270 393 205 394 Q140 393 110 304Z" fill="#cf8250"/>
+  <ellipse cx="205" cy="298" rx="127" ry="18" fill="none" stroke="#f4d991" stroke-width="8" transform="rotate(-13 205 298)"/>
+  <path d="M204 248 Q185 222 194 207 Q209 190 225 207 Q233 220 214 248Z" fill="#476b8a"/>
+  <circle cx="208" cy="203" r="11" fill="#e9c48a"/>
+  <path d="M208 248L190 278M208 248L229 275" stroke="#476b8a" stroke-width="8" stroke-linecap="round"/>
+  <text x="200" y="112" fill="#fff1b3" font-family="Georgia,serif" font-size="16" letter-spacing="3" text-anchor="middle">ANTOINE DE SAINT-EXUPÉRY</text>
+  <text x="200" y="485" fill="#fff1b3" font-family="Georgia,serif" font-size="30" font-weight="bold" text-anchor="middle">THE LITTLE PRINCE</text>
+  <text x="200" y="528" fill="#d6e1ee" font-family="Georgia,serif" font-size="14" letter-spacing="4" text-anchor="middle">A TALE OF WONDER</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-labelledby="title desc">
+  <title id="title">The Book Thief</title>
+  <desc id="desc">Original burgundy cover illustration with floating pages and falling letters.</desc>
+  <rect width="400" height="600" fill="#442d3d"/>
+  <path d="M0 458 Q96 406 202 458 T400 440 V600 H0Z" fill="#74414c"/>
+  <path d="M0 510 Q120 454 230 510 T400 493 V600 H0Z" fill="#a15b58"/>
+  <g fill="#e9d9bd" stroke="#2f2632" stroke-width="3">
+    <path d="M75 219l74-25 17 90-74 25z"/><path d="M237 187l61 28-31 83-61-28z"/><path d="M158 336l86-8-1 75-86 8z"/>
+  </g>
+  <g fill="#543c47" font-family="Georgia,serif" font-size="23" font-weight="bold"><text x="94" y="255" transform="rotate(-14 94 255)">A</text><text x="246" y="247" transform="rotate(24 246 247)">B</text><text x="184" y="380">C</text></g>
+  <g fill="#e6c56f"><circle cx="53" cy="157" r="5"/><circle cx="338" cy="157" r="4"/><circle cx="326" cy="370" r="5"/><circle cx="72" cy="390" r="3"/></g>
+  <text x="200" y="88" fill="#f4e9d8" font-family="Georgia,serif" font-size="19" letter-spacing="5" text-anchor="middle">MARKUS ZUSAK</text>
+  <text x="200" y="143" fill="#f4e9d8" font-family="Georgia,serif" font-size="36" font-weight="bold" text-anchor="middle">THE BOOK</text>
+  <text x="200" y="185" fill="#f4e9d8" font-family="Georgia,serif" font-size="36" font-weight="bold" text-anchor="middle">THIEF</text>
+  <text x="200" y="555" fill="#f4e9d8" font-family="Georgia,serif" font-size="13" letter-spacing="4" text-anchor="middle">WORDS CAN CHANGE A LIFE</text>
+</svg>

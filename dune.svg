@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dune</title>
+  <desc id="desc">Original desert illustration with layered dunes, a large sun, and a small traveler.</desc>
+  <rect width="400" height="600" fill="#202b37"/>
+  <circle cx="282" cy="222" r="83" fill="#df8b50"/>
+  <path d="M0 355 Q80 290 170 355 T400 335 V600 H0Z" fill="#a95636"/>
+  <path d="M0 422 Q110 335 220 411 T400 400 V600 H0Z" fill="#d27b43"/>
+  <path d="M0 485 Q122 406 238 476 T400 470 V600 H0Z" fill="#edb969"/>
+  <path d="M181 472 Q198 428 216 472L226 490H171Z" fill="#242b31"/>
+  <path d="M199 432V405M185 415Q199 399 213 415" stroke="#242b31" stroke-width="7" stroke-linecap="round"/>
+  <g stroke="#f5d8a0" stroke-width="2" opacity=".6"><path d="M30 520q70-28 135-20"/><path d="M245 535q68-20 125-8"/><path d="M46 560q58-18 112-10"/></g>
+  <text x="200" y="91" fill="#f7e6c7" font-family="Georgia,serif" font-size="20" letter-spacing="6" text-anchor="middle">FRANK HERBERT</text>
+  <text x="200" y="180" fill="#f7e6c7" font-family="Georgia,serif" font-size="70" font-weight="bold" letter-spacing="10" text-anchor="middle">DUNE</text>
+  <text x="200" y="571" fill="#3b3030" font-family="Georgia,serif" font-size="13" letter-spacing="5" text-anchor="middle">THE DESERT PLANET</text>
+</svg>

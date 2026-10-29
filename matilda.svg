@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" role="img" aria-labelledby="title desc">
+  <title id="title">Matilda</title>
+  <desc id="desc">Original playful illustration of a child reading beside a tall stack of colorful books.</desc>
+  <rect width="400" height="600" fill="#d8eee8"/>
+  <circle cx="310" cy="145" r="45" fill="#f5c65e"/>
+  <g fill="#f7fbf4"><path d="M67 116l7 18 18 7-18 7-7 18-7-18-18-7 18-7z"/><path d="M332 260l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/></g>
+  <g stroke="#254d4c" stroke-width="5" stroke-linejoin="round">
+    <path d="M72 438h232v49H72z" fill="#ee8e62"/>
+    <path d="M100 386h226v49H100z" fill="#f0c55c"/>
+    <path d="M66 333h247v49H66z" fill="#7fb9a7"/>
+    <path d="M96 280h225v49H96z" fill="#e06c58"/>
+  </g>
+  <path d="M151 224q46-63 89 0l-4 67h-83z" fill="#6b4839"/>
+  <circle cx="196" cy="205" r="38" fill="#f0c39c"/>
+  <path d="M160 202q2-53 40-47 36 4 37 44-31-10-48-30-8 26-29 33z" fill="#6b4839"/>
+  <path d="M163 268l-34 52m106-52 35 53" stroke="#f0c39c" stroke-width="15" stroke-linecap="round"/>
+  <path d="M162 291l35-19 37 19-37 20z" fill="#fff4d5" stroke="#254d4c" stroke-width="4"/>
+  <text x="200" y="96" fill="#254d4c" font-family="Georgia,serif" font-size="22" letter-spacing="6" text-anchor="middle">ROALD DAHL</text>
+  <text x="200" y="178" fill="#254d4c" font-family="Georgia,serif" font-size="54" font-weight="bold" text-anchor="middle">MATILDA</text>
+  <text x="200" y="541" fill="#254d4c" font-family="Georgia,serif" font-size="14" letter-spacing="4" text-anchor="middle">A STORY OF BIG IDEAS</text>
+</svg>

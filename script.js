@@ -14,3 +14,4 @@ if (continueButton) {
   });
 }
 
+const bookcard = document.querySelector("#book-card")
